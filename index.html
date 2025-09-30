@@ -14,16 +14,16 @@
         extend: {
           colors: {
             marine: {
-              50:  '#f4fbfb',
-              100: '#e8f7f7',
-              200: '#c8ecec',
-              300: '#9edbdb',
-              400: '#5dc0c0',
-              500: '#2ea3a3', /* primario suave */
-              600: '#1f7e7e',
-              700: '#1c6464',
-              800: '#184f4f',
-              900: '#123b3b'
+              50:  '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              300: '#7dd3fc',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0369a1',
+              700: '#075985',
+              800: '#0c4a6e',
+              900: '#082f49'
             }
           }
         }
@@ -31,39 +31,35 @@
     }
   </script>
 
-  <!-- Tus estilos opcionales -->
   <link rel="stylesheet" href="assets/css/custom.css">
-  <!-- Favicon con la orca -->
   <link rel="icon" type="image/png" href="assets/img/orca.png" />
 </head>
-<body class="bg-white text-slate-900 selection:bg-marine-200 selection:text-slate-900">
+<body class="bg-marine-50 text-slate-900 selection:bg-marine-200 selection:text-slate-900">
+
   <!-- Header -->
-  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+  <header class="sticky top-0 z-50 bg-marine-900 text-white border-b border-marine-700">
     <div class="max-w-6xl mx-auto px-4">
       <div class="flex items-center justify-between h-16">
-        <!-- Logo / Marca -->
+        <!-- Logo -->
         <a href="/" class="flex items-center gap-3">
           <img src="assets/img/orca.png" alt="Logo orca" class="h-10 w-auto" />
           <div class="leading-tight">
             <span class="block font-semibold">Sofía Calvo Amandi</span>
-            <span class="block text-sm text-slate-500">Psicóloga</span>
+            <span class="block text-sm text-marine-200">Psicóloga</span>
           </div>
         </a>
 
         <!-- Nav desktop -->
         <nav class="hidden md:flex items-center gap-6">
-          <a class="hover:text-marine-700" href="servicios.html">Servicios</a>
-          <a class="hover:text-marine-700" href="sobre-mi.html">Sobre mí</a>
-          <a class="hover:text-marine-700" href="contacto.html">Contacto</a>
-          <a class="inline-flex items-center gap-2 rounded-lg px-4 py-2 bg-marine-500 text-white hover:bg-marine-600 transition"
-             href="reserva.html">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7H3v12a2 2 0 0 0 2 2Z"/></svg>
-            Reservar
-          </a>
+          <a class="hover:text-marine-300" href="servicios.html">Servicios</a>
+          <a class="hover:text-marine-300" href="sobre-mi.html">Sobre mí</a>
+          <a class="hover:text-marine-300" href="contacto.html">Contacto</a>
+          <a class="inline-flex items-center gap-2 rounded-lg px-4 py-2 bg-marine-500 text-white hover:bg-marine-400 transition"
+             href="reserva.html">Reservar</a>
         </nav>
 
         <!-- Botón móvil -->
-        <button id="menuBtn" class="md:hidden p-2 rounded hover:bg-slate-100" aria-label="Abrir menú">
+        <button id="menuBtn" class="md:hidden p-2 rounded hover:bg-marine-800" aria-label="Abrir menú">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
                viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M4 6h16M4 12h16M4 18h16"/>
@@ -73,41 +69,40 @@
     </div>
 
     <!-- Menú móvil -->
-    <nav id="mobileMenu" class="md:hidden hidden border-t border-slate-200">
+    <nav id="mobileMenu" class="md:hidden hidden border-t border-marine-700 bg-marine-800 text-white">
       <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-3">
-        <a class="hover:text-marine-700" href="servicios.html">Servicios</a>
-        <a class="hover:text-marine-700" href="sobre-mi.html">Sobre mí</a>
-        <a class="hover:text-marine-700" href="contacto.html">Contacto</a>
-        <a class="inline-flex w-max items-center gap-2 rounded-lg px-4 py-2 bg-marine-500 text-white hover:bg-marine-600 transition"
+        <a class="hover:text-marine-300" href="servicios.html">Servicios</a>
+        <a class="hover:text-marine-300" href="sobre-mi.html">Sobre mí</a>
+        <a class="hover:text-marine-300" href="contacto.html">Contacto</a>
+        <a class="inline-flex w-max items-center gap-2 rounded-lg px-4 py-2 bg-marine-500 text-white hover:bg-marine-400 transition"
            href="reserva.html">Reservar</a>
       </div>
     </nav>
   </header>
 
   <!-- Hero -->
-  <section class="relative">
+  <section class="relative bg-gradient-to-r from-marine-800 to-marine-600 text-white">
     <div class="max-w-6xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-12 items-center">
       <div>
         <h1 class="text-4xl md:text-5xl font-semibold tracking-tight">
           Un espacio sereno para cuidar de ti
         </h1>
-        <p class="mt-4 text-lg text-slate-600">
+        <p class="mt-4 text-lg text-marine-100">
           Terapia psicológica con enfoque humano y minimalista. Presencial y online.
         </p>
         <div class="mt-8 flex flex-wrap gap-3">
           <a href="reserva.html"
-             class="inline-flex items-center justify-center rounded-xl px-5 py-3 bg-marine-500 text-white hover:bg-marine-600 transition">
+             class="inline-flex items-center justify-center rounded-xl px-5 py-3 bg-marine-400 text-white hover:bg-marine-300 transition">
             Reservar sesión
           </a>
           <a href="servicios.html"
-             class="inline-flex items-center justify-center rounded-xl px-5 py-3 border border-slate-300 hover:border-slate-400">
+             class="inline-flex items-center justify-center rounded-xl px-5 py-3 border border-marine-300 text-marine-100 hover:bg-marine-700">
             Ver servicios
           </a>
         </div>
       </div>
       <div class="relative">
-        <!-- Deco con orca -->
-        <div class="aspect-[4/3] rounded-3xl bg-marine-50 border border-marine-100 flex items-center justify-center">
+        <div class="aspect-[4/3] rounded-3xl bg-marine-700 border border-marine-600 flex items-center justify-center">
           <img src="assets/img/orca.png" alt="Orca" class="w-2/3 opacity-90" />
         </div>
       </div>
@@ -115,48 +110,48 @@
   </section>
 
   <!-- Servicios destacados -->
-  <section class="py-16 border-t border-slate-200">
+  <section class="py-16 bg-marine-100">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-2xl font-semibold">Servicios</h2>
-      <p class="text-slate-600 mt-2">Proceso claro, enfoque práctico.</p>
+      <h2 class="text-2xl font-semibold text-marine-900">Servicios</h2>
+      <p class="text-marine-700 mt-2">Proceso claro, enfoque práctico.</p>
 
       <div class="mt-8 grid md:grid-cols-3 gap-6">
-        <article class="rounded-2xl border border-slate-200 p-6 hover:shadow-sm transition">
-          <h3 class="font-semibold">Terapia individual</h3>
-          <p class="text-slate-600 mt-2">Ansiedad, estrés, autoestima, hábitos.</p>
+        <article class="rounded-2xl bg-white border border-marine-200 shadow-md p-6 hover:shadow-lg transition">
+          <h3 class="font-semibold text-marine-800">Terapia individual</h3>
+          <p class="text-marine-600 mt-2">Ansiedad, estrés, autoestima, hábitos.</p>
         </article>
-        <article class="rounded-2xl border border-slate-200 p-6 hover:shadow-sm transition">
-          <h3 class="font-semibold">Terapia de pareja</h3>
-          <p class="text-slate-600 mt-2">Comunicación, conflictos, proyectos comunes.</p>
+        <article class="rounded-2xl bg-white border border-marine-200 shadow-md p-6 hover:shadow-lg transition">
+          <h3 class="font-semibold text-marine-800">Terapia de pareja</h3>
+          <p class="text-marine-600 mt-2">Comunicación, conflictos, proyectos comunes.</p>
         </article>
-        <article class="rounded-2xl border border-slate-200 p-6 hover:shadow-sm transition">
-          <h3 class="font-semibold">Online</h3>
-          <p class="text-slate-600 mt-2">Sesiones por videollamada, flexibles.</p>
+        <article class="rounded-2xl bg-white border border-marine-200 shadow-md p-6 hover:shadow-lg transition">
+          <h3 class="font-semibold text-marine-800">Online</h3>
+          <p class="text-marine-600 mt-2">Sesiones por videollamada, flexibles.</p>
         </article>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="py-20">
+  <section class="py-20 bg-marine-50">
     <div class="max-w-4xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-semibold">¿Empezamos?</h2>
-      <p class="text-slate-600 mt-3">Agenda tu primera sesión y define objetivos claros.</p>
+      <h2 class="text-3xl font-semibold text-marine-900">¿Empezamos?</h2>
+      <p class="text-marine-700 mt-3">Agenda tu primera sesión y define objetivos claros.</p>
       <a href="reserva.html"
-         class="mt-8 inline-flex items-center rounded-xl px-6 py-3 bg-marine-500 text-white hover:bg-marine-600 transition">
+         class="mt-8 inline-flex items-center rounded-xl px-6 py-3 bg-marine-500 text-white hover:bg-marine-400 transition">
         Reservar ahora
       </a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="border-t border-slate-200">
+  <footer class="bg-marine-900 text-marine-200">
     <div class="max-w-6xl mx-auto px-4 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
-      <p class="text-slate-500">© <span id="year"></span> Sofía Calvo Amandi · Psicóloga</p>
-      <div class="flex gap-5 text-slate-500">
-        <a class="hover:text-marine-700" href="contacto.html">Contacto</a>
-        <a class="hover:text-marine-700" href="reserva.html">Reservas</a>
-        <a class="hover:text-marine-700" href="#">Privacidad</a>
+      <p>© <span id="year"></span> Sofía Calvo Amandi · Psicóloga</p>
+      <div class="flex gap-5">
+        <a class="hover:text-white" href="contacto.html">Contacto</a>
+        <a class="hover:text-white" href="reserva.html">Reservas</a>
+        <a class="hover:text-white" href="#">Privacidad</a>
       </div>
     </div>
   </footer>

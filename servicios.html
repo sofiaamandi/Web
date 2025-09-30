@@ -19,7 +19,10 @@
     <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3">
         <div class="p-2 rounded-xl bg-marine-900 text-white">
-          <svg viewBox="0 0 64 32" class="w-8 h-8"><path d="M4 18c7-8 20-10 30-8 5 1 9 3 14 6 4 3 6 5 8 6-3 1-7 0-11-1-4-1-8-1-12 0-6 1-12 4-18 5-4 0-8-2-11-8z" fill="currentColor"/><circle cx="40" cy="13" r="1.2" fill="#fff"/></svg>
+          <svg viewBox="0 0 64 32" class="w-8 h-8">
+            <path d="M4 18c7-8 20-10 30-8 5 1 9 3 14 6 4 3 6 5 8 6-3 1-7 0-11-1-4-1-8-1-12 0-6 1-12 4-18 5-4 0-8-2-11-8z" fill="currentColor"/>
+            <circle cx="40" cy="13" r="1.2" fill="#fff"/>
+          </svg>
         </div>
         <span class="font-semibold tracking-tight">Sofía Calvo Amandi · Psicóloga</span>
       </a>
@@ -32,40 +35,53 @@
     </div>
   </header>
 
-  <main class="mx-auto max-w-6xl px-4 py-14">
-    <h1 class="text-3xl md:text-4xl font-semibold">Servicios</h1>
-    <p class="mt-3 text-marine-800/80 max-w-prose">Proceso claro, enfoque práctico. Presencial y online.</p>
+  <!-- HERO con orca -->
+  <section class="mx-auto max-w-6xl px-4 py-16 grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <h1 class="text-4xl md:text-5xl font-semibold leading-tight">
+        Servicios de psicología<br>
+        <span class="text-marine-700">adaptados a ti</span>
+      </h1>
+      <p class="mt-4 text-marine-800/80 max-w-prose">
+        Terapia individual, de pareja y online. Con cercanía, claridad y flexibilidad.
+      </p>
+    </div>
+    <div class="rounded-3xl p-6 md:p-8 shadow-lg border border-marine-200 bg-marine-100">
+      <div class="aspect-[4/3] rounded-2xl flex items-center justify-center bg-white">
+        <svg viewBox="0 0 128 64" class="w-5/6 h-auto text-marine-900" aria-hidden="true">
+          <path d="M8 36c12-14 36-18 54-14 9 2 16 5 24 11 7 5 11 8 14 9-5 2-11 1-17-1-6-2-13-2-19 0-10 2-20 6-30 8-7 1-14-2-26-13z" fill="currentColor"/>
+          <circle cx="78" cy="26" r="2.4" fill="#fff"/>
+          <path d="M25 28c3 2 5 5 5 8-3-1-6-3-8-6 1-1 2-2 3-2z" fill="currentColor"/>
+        </svg>
+      </div>
+      <p class="mt-4 text-sm text-marine-800/80">La orca como símbolo de equilibrio, calma y fortaleza.</p>
+    </div>
+  </section>
 
-    <div class="mt-10 grid md:grid-cols-3 gap-6">
-      <!-- Terapia individual -->
+  <!-- SERVICIOS -->
+  <main class="mx-auto max-w-6xl px-4 pb-14">
+    <div class="grid md:grid-cols-3 gap-6">
       <article class="rounded-2xl p-6 bg-white border border-marine-200 shadow-sm">
         <h2 class="font-semibold">Terapia individual</h2>
         <p class="mt-2 text-sm text-marine-800/90">Ansiedad, estrés, autoestima, hábitos, estado de ánimo.</p>
         <a href="reservar.html#agenda" class="mt-4 inline-block text-sm px-4 py-2 rounded-lg bg-marine-900 text-white hover:bg-marine-800">Pedir cita</a>
       </article>
 
-      <!-- Terapia de pareja -->
       <article class="rounded-2xl p-6 bg-white border border-marine-200 shadow-sm">
         <h2 class="font-semibold">Terapia de pareja</h2>
         <p class="mt-2 text-sm text-marine-800/90">Comunicación, conflictos, proyectos comunes.</p>
         <a href="reservar.html#agenda" class="mt-4 inline-block text-sm px-4 py-2 rounded-lg bg-marine-900 text-white hover:bg-marine-800">Pedir cita</a>
       </article>
 
-      <!-- Online -->
       <article class="rounded-2xl p-6 bg-white border border-marine-200 shadow-sm">
         <h2 class="font-semibold">Online</h2>
         <p class="mt-2 text-sm text-marine-800/90">Sesiones por videollamada, flexibles.</p>
         <a href="reservar.html#agenda" class="mt-4 inline-block text-sm px-4 py-2 rounded-lg bg-marine-900 text-white hover:bg-marine-800">Pedir cita</a>
       </article>
     </div>
-
-    <section class="mt-14 text-center">
-      <h3 class="text-2xl font-semibold">¿Empezamos?</h3>
-      <p class="mt-2 text-marine-800/80">Agenda tu primera sesión y define objetivos claros.</p>
-      <a href="reservar.html#agenda" class="mt-6 inline-block px-5 py-3 rounded-xl bg-marine-900 text-white hover:bg-marine-800">Reservar ahora</a>
-    </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="border-t border-marine-200">
     <div class="mx-auto max-w-6xl px-4 py-10 text-sm text-marine-800/80">
       <p>© <span id="year"></span> Sofía Calvo Amandi.</p>

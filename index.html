@@ -3,150 +3,163 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>[Tu Nombre] · Psicóloga</title>
-  <meta name="description" content="Terapia individual, de pareja y online. Reserva tu cita fácilmente." />
-  <!-- Tailwind por CDN -->
+  <title>Sofía Calvo Amandi · Psicóloga</title>
+  <meta name="description" content="Consulta de psicología. Enfoque cercano y minimalista. Atención presencial y online." />
+
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    :root{
-      --bg:#0b1e2b;        /* azul abisal */
-      --ink:#0a0f14;       /* azul casi negro */
-      --foam:#e6f2f8;      /* espuma */
-      --sea:#0f3a53;       /* océano */
-      --mint:#8fd3e6;      /* acento */
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            marine: {
+              50:  '#f4fbfb',
+              100: '#e8f7f7',
+              200: '#c8ecec',
+              300: '#9edbdb',
+              400: '#5dc0c0',
+              500: '#2ea3a3', /* primario suave */
+              600: '#1f7e7e',
+              700: '#1c6464',
+              800: '#184f4f',
+              900: '#123b3b'
+            }
+          }
+        }
+      }
     }
-    html{scroll-behavior:smooth}
-    body{font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial}
-    .glass{backdrop-filter:saturate(140%) blur(8px); background:rgb(255 255 255 / .06)}
-    /* Orca minimal en CSS puro */
-    .orca{position:relative; width:140px; height:72px}
-    .orca:before,.orca:after{content:""; position:absolute; border-radius:999px}
-    .orca:before{inset:0; background:linear-gradient(90deg,var(--ink) 55%,white 56% 64%,var(--ink) 65%)}
-    .orca:after{width:40%; height:40%; left:14%; top:28%; background:white; transform:rotate(-10deg); border-radius:60% 50% 50% 60%}
-    .fin{position:absolute; width:32px; height:32px; background:var(--ink); top:-6px; left:52px; transform:skewX(-10deg) rotate(-12deg); border-radius:4px 4px 18px 18px}
-    .tail{position:absolute; width:26px; height:26px; right:-4px; top:22px}
-    .tail:before,.tail:after{content:""; position:absolute; width:22px; height:16px; background:var(--ink)}
-    .tail:before{border-radius:0 16px 4px 8px; transform:rotate(28deg); left:-4px; top:-2px}
-    .tail:after{border-radius:16px 0 8px 4px; transform:rotate(-28deg); right:-4px; bottom:-2px}
-    .wave-divider{background:linear-gradient(180deg,transparent 0%,transparent 60%,rgb(255 255 255 / .08) 61%); mask: radial-gradient(200% 100% at 50% 0%, black 49%, transparent 50%) top/100% 14px repeat-x}
-  </style>
-  <!-- (Opcional) Calendly: descomenta si lo vas a usar -->
-  <!-- <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-  <script src="https://assets.calendly.com/assets/external/widget.js" async></script> -->
+  </script>
+
+  <!-- Tus estilos opcionales -->
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <link rel="icon" type="image/svg+xml" href="assets/img/orca.svg" />
 </head>
-<body class="bg-[var(--bg)] text-white">
-  <!-- NAV -->
-  <header class="sticky top-0 z-50 glass">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="#inicio" class="flex items-center gap-3 group">
-        <div class="orca select-none" aria-hidden="true"><span class="fin"></span><span class="tail"></span></div>
-        <div>
-          <p class="text-xs uppercase tracking-[0.18em] text-[var(--mint)]">Consulta de psicología</p>
-          <h1 class="font-semibold leading-tight -mt-1">[Tu Nombre] · Psicóloga</h1>
-        </div>
-      </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="#servicios" class="hover:text-[var(--mint)]">Servicios</a>
-        <a href="#sobre-mi" class="hover:text-[var(--mint)]">Sobre mí</a>
-        <a href="#blog" class="hover:text-[var(--mint)]">Blog</a>
-        <a href="#reserva" class="px-3 py-2 rounded-xl bg-white/10 hover:bg-white/20">Reservar</a>
-      </nav>
+<body class="bg-white text-slate-900 selection:bg-marine-200 selection:text-slate-900">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo / Marca -->
+        <a href="/" class="flex items-center gap-3">
+          <img src="assets/img/orca.svg" alt="Logo orca" class="h-8 w-8" />
+          <div class="leading-tight">
+            <span class="block font-semibold">Sofía Calvo Amandi</span>
+            <span class="block text-sm text-slate-500">Psicóloga</span>
+          </div>
+        </a>
+
+        <!-- Nav desktop -->
+        <nav class="hidden md:flex items-center gap-6">
+          <a class="hover:text-marine-700" href="servicios.html">Servicios</a>
+          <a class="hover:text-marine-700" href="sobre-mi.html">Sobre mí</a>
+          <a class="hover:text-marine-700" href="contacto.html">Contacto</a>
+          <a class="inline-flex items-center gap-2 rounded-lg px-4 py-2 bg-marine-500 text-white hover:bg-marine-600 transition"
+             href="reserva.html">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7H3v12a2 2 0 0 0 2 2Z"/></svg>
+            Reservar
+          </a>
+        </nav>
+
+        <!-- Botón móvil -->
+        <button id="menuBtn" class="md:hidden p-2 rounded hover:bg-slate-100" aria-label="Abrir menú">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+               viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
     </div>
-    <div class="wave-divider h-3"></div>
+
+    <!-- Menú móvil -->
+    <nav id="mobileMenu" class="md:hidden hidden border-t border-slate-200">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-3">
+        <a class="hover:text-marine-700" href="servicios.html">Servicios</a>
+        <a class="hover:text-marine-700" href="sobre-mi.html">Sobre mí</a>
+        <a class="hover:text-marine-700" href="contacto.html">Contacto</a>
+        <a class="inline-flex w-max items-center gap-2 rounded-lg px-4 py-2 bg-marine-500 text-white hover:bg-marine-600 transition"
+           href="reserva.html">Reservar</a>
+      </div>
+    </nav>
   </header>
 
-  <!-- HERO -->
-  <section id="inicio" class="relative overflow-hidden">
-    <div class="absolute inset-0 opacity-20" aria-hidden="true">
-      <svg viewBox="0 0 1440 320" class="w-full h-full">
-        <path fill="#8fd3e6" fill-opacity="0.16" d="M0,64L60,58.7C120,53,240,43,360,80C480,117,600,203,720,202.7C840,203,960,117,1080,85.3C1200,53,1320,75,1380,85.3L1440,96V0H0Z"/>
-      </svg>
-    </div>
-    <div class="max-w-6xl mx-auto px-4 py-20 md:py-28 grid md:grid-cols-2 gap-10 relative">
+  <!-- Hero -->
+  <section class="relative">
+    <div class="max-w-6xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-12 items-center">
       <div>
-        <p class="text-[var(--mint)] tracking-[0.18em] text-xs uppercase">Terapia individual · pareja · online</p>
-        <h2 class="text-4xl md:text-5xl font-semibold mt-2">Espacio minimalista para tu bienestar</h2>
-        <p class="mt-4 text-white/80">Enfoque humano y basado en evidencia. Sesiones presenciales y online.</p>
-        <div class="mt-6 flex gap-3">
-          <a href="#reserva" class="px-5 py-3 rounded-xl bg-[var(--mint)] text-black font-medium hover:opacity-90">Reservar cita</a>
-          <a href="#servicios" class="px-5 py-3 rounded-xl border border-white/20 hover:bg-white/10">Ver servicios</a>
+        <h1 class="text-4xl md:text-5xl font-semibold tracking-tight">
+          Un espacio sereno para cuidar de ti
+        </h1>
+        <p class="mt-4 text-lg text-slate-600">
+          Terapia psicológica con enfoque humano y minimalista. Presencial y online.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="reserva.html"
+             class="inline-flex items-center justify-center rounded-xl px-5 py-3 bg-marine-500 text-white hover:bg-marine-600 transition">
+            Reservar sesión
+          </a>
+          <a href="servicios.html"
+             class="inline-flex items-center justify-center rounded-xl px-5 py-3 border border-slate-300 hover:border-slate-400">
+            Ver servicios
+          </a>
         </div>
       </div>
-      <div class="md:pl-8 flex items-center justify-center">
-        <div class="aspect-[4/3] w-full max-w-md rounded-2xl border border-white/10 bg-gradient-to-br from-[var(--sea)]/60 to-black/20 flex items-center justify-center">
-          <span class="text-white/70">(Motivo marino minimal 🐋)</span>
+      <div class="relative">
+        <!-- Deco con orca mínima -->
+        <div class="aspect-[4/3] rounded-3xl bg-marine-50 border border-marine-100 flex items-center justify-center">
+          <img src="assets/img/orca.svg" alt="Orca" class="w-2/3 opacity-90" />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SERVICIOS -->
-  <section id="servicios" class="py-16 border-t border-white/10">
+  <!-- Servicios destacados -->
+  <section class="py-16 border-t border-slate-200">
     <div class="max-w-6xl mx-auto px-4">
-      <h3 class="text-2xl font-semibold mb-6">Servicios</h3>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="p-6 rounded-2xl border border-white/10 bg-white/5">
-          <h4 class="font-medium">Terapia individual</h4>
-          <p class="text-white/70 mt-2">Ansiedad, autoestima, estrés, duelo.</p>
-        </div>
-        <div class="p-6 rounded-2xl border border-white/10 bg-white/5">
-          <h4 class="font-medium">Terapia de pareja</h4>
-          <p class="text-white/70 mt-2">Comunicación, conflictos, proyectos comunes.</p>
-        </div>
-        <div class="p-6 rounded-2xl border border-white/10 bg-white/5">
-          <h4 class="font-medium">Terapia online</h4>
-          <p class="text-white/70 mt-2">Sesiones seguras y flexibles.</p>
-        </div>
+      <h2 class="text-2xl font-semibold">Servicios</h2>
+      <p class="text-slate-600 mt-2">Proceso claro, enfoque práctico.</p>
+
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <article class="rounded-2xl border border-slate-200 p-6 hover:shadow-sm transition">
+          <h3 class="font-semibold">Terapia individual</h3>
+          <p class="text-slate-600 mt-2">Ansiedad, estrés, autoestima, hábitos.</p>
+        </article>
+        <article class="rounded-2xl border border-slate-200 p-6 hover:shadow-sm transition">
+          <h3 class="font-semibold">Terapia de pareja</h3>
+          <p class="text-slate-600 mt-2">Comunicación, conflictos, proyectos comunes.</p>
+        </article>
+        <article class="rounded-2xl border border-slate-200 p-6 hover:shadow-sm transition">
+          <h3 class="font-semibold">Online</h3>
+          <p class="text-slate-600 mt-2">Sesiones por videollamada, flexibles.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- SOBRE MI -->
-  <section id="sobre-mi" class="py-16 border-t border-white/10">
-    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-start">
-      <div>
-        <h3 class="text-2xl font-semibold mb-4">Sobre mí</h3>
-        <p class="text-white/80">[Tu bio breve]. Enfoque integrador y cercano, con herramientas basadas en evidencia.</p>
-      </div>
-      <div class="rounded-2xl border border-white/10 p-6 bg-white/5">
-        <ul class="space-y-2 text-white/80 text-sm">
-          <li>• Colegiada nº [XXXX]</li>
-          <li>• Formación en [áreas clave]</li>
-          <li>• Atención presencial y online</li>
-        </ul>
-      </div>
+  <!-- CTA -->
+  <section class="py-20">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-semibold">¿Empezamos?</h2>
+      <p class="text-slate-600 mt-3">Agenda tu primera sesión y define objetivos claros.</p>
+      <a href="reserva.html"
+         class="mt-8 inline-flex items-center rounded-xl px-6 py-3 bg-marine-500 text-white hover:bg-marine-600 transition">
+        Reservar ahora
+      </a>
     </div>
   </section>
 
-  <!-- BLOG -->
-  <section id="blog" class="py-16 border-t border-white/10">
-    <div class="max-w-6xl mx-auto px-4">
-      <h3 class="text-2xl font-semibold mb-6">Blog</h3>
-      <p class="text-white/70">Pronto aquí artículos y recursos. (Si usas Git, puedes crear `/blog/mi-post.html` y enlazarlo.)</p>
-    </div>
-  </section>
-
-  <!-- RESERVA (Calendly/Acuity embed en el futuro) -->
-  <section id="reserva" class="py-16 border-t border-white/10">
-    <div class="max-w-6xl mx-auto px-4">
-      <h3 class="text-2xl font-semibold mb-6">Reserva</h3>
-      <div class="rounded-2xl border border-white/10 p-6 bg-white/5">
-        <p class="text-white/80">Puedes integrar Calendly incrustando su código aquí.</p>
-        <!-- Ejemplo Calendly (descomenta cuando tengas el enlace)
-        <div class="calendly-inline-widget" data-url="https://calendly.com/TU-USUARIO/primera-sesion" style="min-width:320px;height:700px;"></div>
-        -->
+  <!-- Footer -->
+  <footer class="border-t border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-slate-500">© <span id="year"></span> Sofía Calvo Amandi · Psicóloga</p>
+      <div class="flex gap-5 text-slate-500">
+        <a class="hover:text-marine-700" href="contacto.html">Contacto</a>
+        <a class="hover:text-marine-700" href="reserva.html">Reservas</a>
+        <a class="hover:text-marine-700" href="#">Privacidad</a>
       </div>
-    </div>
-  </section>
-
-  <footer class="py-10 border-t border-white/10 text-white/60 text-sm">
-    <div class="max-w-6xl mx-auto px-4 flex items-center justify-between">
-      <span>© <span id="y"></span> [Tu Nombre] · Psicóloga</span>
-      <a href="#inicio" class="hover:text-white">↑ Volver arriba</a>
     </div>
   </footer>
 
-  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
-

@@ -37,48 +37,51 @@
 <body class="bg-marine-50 text-slate-900 selection:bg-marine-200 selection:text-slate-900">
 
   <!-- Header -->
-  <header class="sticky top-0 z-50 bg-marine-900 text-white border-b border-marine-700">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="flex items-center justify-between h-16">
-        <!-- Logo -->
-        <a href="/" class="flex items-center gap-3">
-          <img src="assets/img/orca.png" alt="Logo orca" class="h-10 w-auto" />
-          <div class="leading-tight">
-            <span class="block font-semibold">Sofía Calvo Amandi</span>
-            <span class="block text-sm text-marine-200">Psicóloga</span>
-          </div>
-        </a>
+<header class="sticky top-0 z-50 bg-gradient-to-r from-marine-900 to-marine-800 text-white border-b border-marine-700">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo + marca -->
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-white/10 grid place-items-center ring-1 ring-white/15">
+          <img src="assets/img/orca.png" alt="Logo orca" class="w-6 h-6" />
+        </div>
+        <div class="leading-tight">
+          <span class="block font-semibold">Sofía Calvo Amandi</span>
+          <span class="block text-sm text-marine-200/90">Psicóloga</span>
+        </div>
+      </a>
 
-        <!-- Nav desktop -->
-        <nav class="hidden md:flex items-center gap-6">
-          <a class="hover:text-marine-300" href="servicios.html">Servicios</a>
-          <a class="hover:text-marine-300" href="sobre-mi.html">Sobre mí</a>
-          <a class="hover:text-marine-300" href="contacto.html">Contacto</a>
-          <a class="inline-flex items-center gap-2 rounded-lg px-4 py-2 bg-marine-500 text-white hover:bg-marine-400 transition"
-             href="reserva.html">Reservar</a>
-        </nav>
-
-        <!-- Botón móvil -->
-        <button id="menuBtn" class="md:hidden p-2 rounded hover:bg-marine-800" aria-label="Abrir menú">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-               viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-        </button>
-      </div>
-    </div>
-
-    <!-- Menú móvil -->
-    <nav id="mobileMenu" class="md:hidden hidden border-t border-marine-700 bg-marine-800 text-white">
-      <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-3">
-        <a class="hover:text-marine-300" href="servicios.html">Servicios</a>
-        <a class="hover:text-marine-300" href="sobre-mi.html">Sobre mí</a>
-        <a class="hover:text-marine-300" href="contacto.html">Contacto</a>
-        <a class="inline-flex w-max items-center gap-2 rounded-lg px-4 py-2 bg-marine-500 text-white hover:bg-marine-400 transition"
+      <!-- Nav desktop -->
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a class="hover:underline" href="servicios.html">Servicios</a>
+        <a class="hover:underline" href="sobre-mi.html">Sobre mí</a>
+        <a class="hover:underline" href="contacto.html">Contacto</a>
+        <a class="inline-flex items-center gap-2 rounded-lg px-3 py-2 bg-white text-marine-900 hover:bg-marine-100 transition"
            href="reserva.html">Reservar</a>
-      </div>
-    </nav>
-  </header>
+      </nav>
+
+      <!-- Botón móvil -->
+      <button id="menuBtn" class="md:hidden p-2 rounded hover:bg-white/10" aria-label="Abrir menú">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Menú móvil -->
+  <nav id="mobileMenu" class="md:hidden hidden border-t border-white/10 bg-marine-800/95 backdrop-blur text-white">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-3">
+      <a class="hover:underline" href="servicios.html">Servicios</a>
+      <a class="hover:underline" href="sobre-mi.html">Sobre mí</a>
+      <a class="hover:underline" href="contacto.html">Contacto</a>
+      <a class="inline-flex w-max items-center gap-2 rounded-lg px-3 py-2 bg-white text-marine-900 hover:bg-marine-100 transition"
+         href="reserva.html">Reservar</a>
+    </div>
+  </nav>
+</header>
+
 
   <!-- Hero -->
   <section class="relative bg-gradient-to-r from-marine-800 to-marine-600 text-white">
